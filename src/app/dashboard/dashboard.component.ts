@@ -33,6 +33,10 @@ export class DashboardComponent implements OnInit {
     this.dataService.sendGetRequestProducts().subscribe((data) => {
       console.log(data);
       this.listProduts = data;
-    });
-   }
+    },
+    (error) => {
+      console.log(error);
+    }
+    );
+  }
 }

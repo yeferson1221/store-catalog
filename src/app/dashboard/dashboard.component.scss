@@ -1,26 +1,12 @@
-.e-product-card {
-    margin-top: 11px;
-    max-width: 400px;
-  }
-  
-  img.e-product-img {
-    height: 300px;
-    width: 300px;
-  }
-  
-  div.app-products-div {
-    padding: 13px;
-    margin-top: 57px;
-  }
 
-
-  .content {
+.content {
     padding: 16px;
 }
 
 .content > mat-card {
-  width: 290px;
-  height: 260px;
+    top: 20%;
+    width: 290px;
+    height: auto;
 }
 
 mat-toolbar {
@@ -41,8 +27,10 @@ mat-toolbar {
 }
 
 .container {
-    width: 100%;
+    position: relative;
+    width: 80%;
     height: 100%;
+    left: 10%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
