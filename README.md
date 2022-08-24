@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+la pagina de Store, tiene su lista de productos y su nav bar 
+![1](https://user-images.githubusercontent.com/43868710/186527685-c968a441-bb37-446d-81a9-24dccc681f6b.png)
