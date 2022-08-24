@@ -35,7 +35,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## cuando los productos estan en 0  este agrega un letrero rojo de no disponible y la cantidad cambia tambien a no disponible
 ![3](https://user-images.githubusercontent.com/43868710/186528121-f135376c-3a3b-4bec-a574-8ef0370bb425.png)
 
+## la paginacion, con el fin de no listar todo  lo almacenado  y seccionarlos de a 6 cards
+![image](https://user-images.githubusercontent.com/43868710/186528627-166d2859-88ce-4b77-9c70-805cbfa13388.png)
+
 ## por ultimo la pagina de about 
 ![4](https://user-images.githubusercontent.com/43868710/186528161-dca05d85-9cd9-4b66-99be-57e4a50622a3.png)
+
+
 
 
