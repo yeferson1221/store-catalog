@@ -16,9 +16,9 @@
                 <p>
                     {{ product.description }}
                 </p>
-                <mat-card-actions>
-                    <button  mat-raised-button color="primary" class="button-card" >Buy Product</button>
-                  </mat-card-actions>
+               
+                    <button  mat-raised-button color="primary" class="button-card" (click)="openDialog('0ms', '0ms')">Buy Product</button>
+                  
             </mat-card-content>
         </mat-card>
     </div>
