@@ -42,12 +42,21 @@ mat-toolbar {
     width: 100%;
 }
 .img {
+
     filter: grayscale(1);
     height: 200px;
 
 }
 .img2 {
     height: 200px;
+}
+
+.p {
+    position: absolute;
+    top: 28%;
+    left: 10%;
+    width: 170px;
+    height: 100px;
 }
 
 .mat-elevation-z4:hover {

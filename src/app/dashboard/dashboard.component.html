@@ -3,7 +3,10 @@
     let product of listProduts | paginate: { itemsPerPage: 6, currentPage: page }
   ">
         <mat-card class="mat-elevation-z4">
-            <img mat-card-image src="{{product.imageUrl}}" [ngClass]="this.styles ? 'img' : 'img2'" />  
+            <img mat-card-image src="{{product.imageUrl}}" [ngClass]=" this.styles ? 'img' : 'img2'"/>  
+            <div *ngIf="product.quantity === 'SOLD OUT'">
+                <img mat-card-image  src="{{product.imageUrlOut}}" class="p" />
+            </div>
             <mat-card-content>
                 <mat-card-title>{{ product.name }}</mat-card-title>
                 <p>
@@ -11,7 +14,7 @@
                 </p>
 
                 <p>
-                  GUANTITY:  {{ product.quantity }}
+                  QUANTITY:  {{ product.quantity }}
                 </p>
                 <p>
                     {{ product.description }}
