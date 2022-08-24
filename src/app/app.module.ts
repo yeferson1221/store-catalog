@@ -7,7 +7,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 //Pages
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { DashboardComponent, DialogAnimationsExampleDialog } from './dashboard/dashboard.component';
 
 //Material
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,12 +17,16 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AboutComponent } from './about/about.component';
+import { MatPaginatorModule} from '@angular/material/paginator';
+import { MatDialogModule } from '@angular/material/dialog';
+import {DialogModule} from '@angular/cdk/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    AboutComponent
+    AboutComponent,
+    DialogAnimationsExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -34,9 +38,15 @@ import { AboutComponent } from './about/about.component';
     MatCardModule,
     MatProgressSpinnerModule,
     MatButtonModule,
+    MatPaginatorModule,
+    MatDialogModule,
+    DialogModule,
     NgxPaginationModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

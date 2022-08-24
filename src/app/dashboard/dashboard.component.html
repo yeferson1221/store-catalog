@@ -1,10 +1,9 @@
-<div class="container">
+<div class="container row d-flex justify-content-around">
     <div class="content" *ngFor="
-    let product of listProduts
-      | paginate: { itemsPerPage: 6, currentPage: page }
+    let product of listProduts | paginate: { itemsPerPage: 6, currentPage: page }
   ">
         <mat-card class="mat-elevation-z4">
-            <img mat-card-image src="{{product.imageUrl}}" class="img" />
+            <img mat-card-image src="{{product.imageUrl}}" [ngClass]="this.styles ? 'img' : 'img2'" />  
             <mat-card-content>
                 <mat-card-title>{{ product.name }}</mat-card-title>
                 <p>
@@ -17,6 +16,9 @@
                 <p>
                     {{ product.description }}
                 </p>
+                <mat-card-actions>
+                    <button  mat-raised-button color="primary" class="button-card" >Buy Product</button>
+                  </mat-card-actions>
             </mat-card-content>
         </mat-card>
     </div>

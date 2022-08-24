@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../interfaces/IProduts';
 import { DataService } from '../service/data.service';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,8 +10,15 @@ import { DataService } from '../service/data.service';
 })
 export class DashboardComponent implements OnInit {
  listProduts: Product[] = [];
+ listPrice: any[] = [];
  page?: number;
-  constructor(private dataService: DataService) { }
+ styles: boolean;
+  constructor(
+    private dataService: DataService,
+    public dialog: MatDialog
+    ) { 
+    this.styles = true;
+  }
 
   ngOnInit(): void {
     this.productAll();
@@ -32,11 +40,34 @@ export class DashboardComponent implements OnInit {
    productAll(){
     this.dataService.sendGetRequestProducts().subscribe((data) => {
       console.log(data);
-      this.listProduts = data;
+      localStorage.setItem('product', JSON.stringify(data));
+      this.listProduts = JSON.parse(localStorage.getItem("product")!);
     },
     (error) => {
       console.log(error);
     }
     );
   }
+
+  buy(){
+   
+      alert("Compra Exitosa")
+  
+  }
+
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(DialogAnimationsExampleDialog, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+}
+
+@Component({
+  selector: 'dialog-animations-example-dialog',
+  templateUrl: 'dialog-animations-example-dialog.html',
+})
+export class DialogAnimationsExampleDialog {
+  constructor(public dialogRef: MatDialogRef<DialogAnimationsExampleDialog>) {}
 }
